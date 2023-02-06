@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-&u&^5z72#hyhm$4fm@zba*7*6%k&qpy-@l*l0##9&$@e(8h89*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -94,6 +94,23 @@ TEMPLATES = [
         },
     },
 ]
+# security.W016
+CSRF_COOKIE_SECURE = True
+
+# security.W012
+SESSION_COOKIE_SECURE = True
+
+# security.W008
+SECURE_SSL_REDIRECT = True
+
+# security.W004
+SECURE_HSTS_SECONDS = 31536000  # One year in seconds
+
+# Another security settings
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
 
 WSGI_APPLICATION = 'icu.wsgi.application'
 
