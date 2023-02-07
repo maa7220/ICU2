@@ -63,7 +63,7 @@ class SignUpUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ["email", "username", "name", "phone", 'image', 'nat_idو'
+        fields = ["email", "username", "name", "phone", 'image', 'nat_id',
                   "password", "role", "gender", "age", "specialization"]
 
     extra_kwargs = {
